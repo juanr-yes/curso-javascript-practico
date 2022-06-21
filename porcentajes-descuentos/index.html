@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de porcentajes y descuentos - Clase 10/24</title>
+    <style>
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      form div {
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Porcentajes y descuentos</h1>
+    </header>
+    <section>
+      <h2>Calcula el precio a pagar de tus productos con descuento</h2>
+      <form action="">
+        <div>
+          <label for="precio">
+            Escribe el precio de tu producto
+          </label>
+          <input type="number" id="precio">
+        </div>
+        <div>
+          <label for="descuento">
+            Escribe el descuento a aplicar
+          </label>
+          <input type="number" id="descuento">
+        </div>
+        <button type="button" onclick="onClickButtonPriceDiscount()">Calcular el precio con descuento</button>
+      </form>
+      <p id="resultado"></p>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
