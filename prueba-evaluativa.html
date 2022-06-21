@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de JavaScript - Clase 2/24</title>
+    <style>
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .title {
+        margin-bottom: 10px;
+      }
+      h5 {
+        margin: 0 0 10px 0;
+      }
+      ol, ul {
+        font-size: 12px;
+      }
+      ol li, ul li {
+        margin-bottom: 5px;
+      }
+      .question {
+        margin-bottom: 20px;
+      }
+      blockquote {
+        background-color: black;
+        color: green;
+        padding: 10px;
+      }
+      form div {
+        margin-bottom: 5px;
+      }
+      form button {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <h3 class="title">
+          Variables y operaciones
+        </h3>
+      </div>
+      <div class="question">
+        <h5>
+          1. Responde las siguientes preguntas en la sección de comentarios:
+        </h5>
+        <ol>
+          <li>
+            <b>¿Qué es una variable y para qué sirve?:</b> Una variable nos permite almacenar información.
+          </li>
+          <li>
+            <b>¿Cuál es la diferencia entre declarar e inicializar una variable?:</b> Cuando se declara una variable es el momento en el que se utiliza la palabra reservada según corresponda y se asigna un identificador a la misma. Cuando se inicializa una variable, es cuando se le asigna un valor.
+          </li>
+          <li>
+            <b>¿Cuál es la diferencia entre sumar números y concatenar strings?:</b> Cuando se suman numeros o valores int se está realizando el proceso matemático de adición, al concatenar strings se juntan lineas de texto.
+          </li>
+          <li>
+            <b>¿Cuál operador me permite sumar o concatenar?:</b> El operador de adición "+".
+          </li>
+        </ol>
+      </div>
+      <div class="question">
+        <h5>
+          2. Determina el nombre y tipo de dato para almacenar en variables la siguiente información:
+        </h5>
+        <ol>
+          <li>
+            <b>Nombre:</b> Juan - string
+          </li>
+          <li>
+            <b>Apellido:</b> Reyes - string
+          </li>
+          <li>
+            <b>Nombre de usuario en Platzi:</b> juanryes - string
+          </li>
+          <li>
+            <b>Edad:</b> 27 - integer
+          </li>
+          <li>
+            <b>Correo electrónico:</b> reyjun4@gmail.com - string
+          </li>
+          <li>
+            <b>Mayor de edad:</b> true - boolean
+          </li>
+          <li>
+            <b>Dinero ahorrado:</b> 100 - integer
+          </li>
+          <li>
+            <b>Deudas:</b> 10 - integer
+          </li>
+        </ol>
+      </div>
+      <div class="question">
+        <h5>
+          3. Traduce a código JavaScript las variables del ejemplo anterior y deja tu código en los comentarios.
+        </h5>
+        <ul>
+          <li>
+            Realizado en etiqueta script de este documento.
+          </li>
+        </ul>
+      </div>
+      <div class="question">
+        <h5>
+          4. Calcula e imprime las siguientes variables a partir de las variables del ejemplo anterior:
+        </h5>
+        <ol>
+          <li>
+            <b>Nombre completo (nombre y apellido):</b> <span id="section1Question4Part1"></span>
+          </li>
+          <li>
+            <b>Dinero real (dinero ahorrado menos deudas):</b> <span id="section1Question4Part2"></span>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <hr/>
+    <section>
+      <div>
+        <h3 class="title">
+          Funciones
+        </h3>
+      </div>
+      <div class="question">
+        <h5>1. Responde las siguientes preguntas en la sección de comentarios:</h5>
+        <ol>
+          <li><b>¿Qué es una función?:</b> Es el metodo de encapsular acciones dentro de una variable que al ser invocada ejecutará su contenido.</li>
+          <li><b>¿Cuándo me sirve usar una función en mi código?:</b> No solo por buena práctica para tener un codigo ordenado y mantenible sino para cuando necesitas reutilizar un bloque de codigo en diferentes lugares del proyecto.</li>
+          <li><b>¿Cuál es la diferencia entre parámetros y argumentos de una función?:</b> Los parametros son los valores que establecemos que debe recibir nuestra función y los argumentos son los valores que en realidad recibe.</li>
+        </ol>
+      </div>
+      <div class="question">
+        <h5>2. Convierte el siguiente código en una función, pero, cambiando cuando sea necesario las variables constantes por parámetros y argumentos en una función:</h5>
+        <blockquote>
+          const name = "Juan David";<br>
+          const lastname = "Castro Gallego";<br>
+          const completeName = name + lastname;<br>
+          const nickname = "juandc";<br>
+          <br>
+          console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
+        </blockquote>
+        <form action="" onsubmit="enviarSaludo();">
+          <div>
+            <label for="name">
+              Ingresa tu nombre
+            </label>
+            <input type="text" id="name" value="Juan"/>
+          </div>
+          <div>
+            <label for="lastname">
+              Ingresa tu apellido
+            </label>
+            <input type="text" id="lastname" value="Reyes"/>
+          </div>
+          <div>
+            <label for="lastname">
+              Ingresa tu sobrenombre
+            </label>
+            <input type="text" id="nickname" value="Juancito"/>
+          </div>
+          <button>Enviar</button>
+        </form>
+      </div>
+    </section>
+    <hr>
+    <section>
+      <div>
+        <h3 class="title">
+          Condicionales
+        </h3>
+      </div>
+      <div class="question">
+        <h5>1. Responde las siguientes preguntas en la sección de comentarios:</h5>
+        <ol>
+          <li>
+            <b>¿Qué es una condicional?:</b> Son elementos evaluadores que ejecutan un bloque si la condicion establecida se cumple.
+          </li>
+          <li>
+            <b>¿Qué tipos de condicionales existen en JavaScript y cuáles son sus diferencias?:</b> 'if': ejecuta un bloque de codigo si y solo si se cumple la condicion evaluada. 'if-else': ejecuta un bloque de codigo solo si se cumple la condición evaluada, de lo contrario, ejecuta otro bloque de codigo. 'switch' recibe una condición y permite establecer diferentes caminos a seguir mediante validaciones segun necesitemos.
+          </li>
+          <li>
+            <b>¿Puedo combinar funciones y condicionales?:</b> Si.
+          </li>
+        </ol>
+      </div>
+      <div class="question">
+        <h5>2. Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, else y else if:</h5>
+        <blockquote>
+          const tipoDeSuscripcion = "Basic";
+          <br>
+          switch (tipoDeSuscripcion) {<br>
+            case "Free":<br>
+              console.log("Solo puedes tomar los cursos gratis");<br>
+              break;<br>
+            case "Basic":<br>
+              console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");<br>
+              break;<br>
+            case "Expert":<br>
+              console.log("Puedes tomar casi todos los cursos de Platzi durante un año");<br>
+              break;<br>
+            case "ExpertPlus":<br>
+              console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");<br>
+              break;<br>
+          }
+        </blockquote>
+        <form action="">
+          <div>
+            <label for="selectSubscription">
+              Selecciona una suscripción
+            </label>
+            <select id="selectSubscription" onchange="changeSubscription()">
+              <option value="" selected disabled>- Selecciona -</option>
+              <option value="free">Free</option>
+              <option value="basic">Basic</option>
+              <option value="expert">Expert</option>
+              <option value="expertplus">Expert+</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </section>
+    <hr>
+    <section>
+      <div>
+        <h3 class="title">
+          Ciclos
+        </h3>
+      </div>
+      <div class="question">
+        <h5>1. Responde las siguientes preguntas en la sección de comentarios:</h5>
+        <ol>
+          <li>
+            <b>¿Qué es un ciclo?:</b> Es un elemento que nos permite ejecutar un bloque de contenido tantas veces como su configuración lo establezca.
+          </li>
+          <li>
+            <b>¿Qué tipos de ciclos existen en JavaScript?:</b> for, for of, for in, while, do while
+          </li>
+          <li>
+            <b>¿Qué es un ciclo infinito y por qué es un problema?:</b> Es un ciclo que no tiene establecido un fin por lo que se continuará ejecutando y es un problema porque generará el colapso del navegador del usuario.
+          </li>
+          <li>
+            <b>¿Puedo mezclar ciclos y condicionales?:</b> Si.
+          </li>
+        </ol>
+      </div>
+      <div class="question">
+        <h5>2. Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:</h5>
+        <blockquote>
+          for (let i = 0; i < 5; i++) { <br/>
+            console.log("El valor de i es: " + i); <br/>
+          }
+        </blockquote>
+        <blockquote>
+          for (let i = 10; i >= 2; i--) { <br/>
+            console.log("El valor de i es: " + i); <br/>
+          }
+        </blockquote>
+        <button onclick="ejercicioWhile1()">Ejercicio 1</button>
+        <button onclick="ejercicioWhile2()">Ejercicio 2</button>
+      </div>
+      <div class="question">
+        <h5>3. Escribe un código en JavaScript que le pregunte a los usuarios cuánto es 2 + 2. Si responden bien, mostramos un mensaje de felicitaciones, pero si responden mal, volvemos a empezar.</h5>
+        <button onclick="evaluarAdicion()">Empezar</button>
+      </div>
+    </section>
+    <hr>
+    <section>
+      <div>
+        <h3>
+          Listas
+        </h3>
+      </div>
+      <div class="question">
+        <h5>1. Responde las siguientes preguntas en la sección de comentarios:</h5>
+        <ul>
+          <li>
+            <b>¿Qué es un array?:</b> Es un tipo de variable que nos permite almacenar varios valores en forma de lista.
+          </li>
+          <li>
+            <b>¿Qué es un objeto?:</b> Es un tipo de variable que nos permite clasificar el contenido del mismo según se necesite.
+          </li>
+          <li>
+            <b>¿Cuándo es mejor usar objetos o arrays?:</b> Los objetos son ideales para almacenar información relacionada de un elemento (ej: objeto persona, propiedades nombre, edad, altura) mientras que el array es mas acorde para almacenar elementos similares (ej: array frutas, contenido manzana pera uva naranja).
+          </li>
+          <li>
+            <b>¿Puedo mezclar arrays con objetos o incluso objetos con arrays?:</b> Si
+          </li>
+        </ul>
+      </div>
+      <div class="question">
+        <h5>2. Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.</h5>
+        <blockquote>
+          let frutas = ["manzana", "pera", "uva", "naranja", "limon"]
+        </blockquote>
+        <button onclick="section4Question2(arrayFrutas)">Enviar</button>
+      </div>
+      <div class="question">
+        <h5>3. Crea una función que pueda recibir cualquier array como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el array completo).</h5>
+        <blockquote>
+          let frutas = ["manzana", "pera", "uva", "naranja", "limon"]
+        </blockquote>
+        <button onclick="section4Question3(arrayFrutas)">Enviar</button>
+      </div>
+      <div class="question">
+        <h5>4. Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo).</h5>
+        <blockquote>
+          let juanReyes = {<br>
+            "nombre": "Juan",<br>
+            "apellido": "Reyes",<br>
+            "edad": 27,<br>
+            "programador": true<br>
+          }
+        </blockquote>
+        <button onclick="section4Question4(juanReyes)">Enviar</button>
+      </div>
+    </section>
+    <script>
+      const name = "Juan";
+      const lastname = "Reyes";
+      const platziUsername = "juanryes";
+      let age = 27;
+      const email = "reyjun4@gmail.com";
+      const adult = true;
+      let savedMoney = 100;
+      let debts = 10;
+
+      document.getElementById('section1Question4Part1').innerHTML = name + ' ' + lastname;
+      document.getElementById('section1Question4Part2').innerHTML = savedMoney - debts;
+      //////////////////////////////////////////////////////////////////////////////////
+      function enviarSaludo() {
+        let section2Question2Name = document.getElementById('name').value;
+        let section2Question2Lastname = document.getElementById('lastname').value;
+        let section2Question2Nickname = document.getElementById('nickname').value;
+        let section2Question2Button = document.getElementById('enviarSaludo');
+        let completeName = section2Question2Name + ' ' + section2Question2Lastname;
+        alert("Mi nombre es " + completeName + ", pero prefiero que me digas " + section2Question2Nickname + ".")
+      }
+      //////////////////////////////////////////////////////////////////////////////////
+      function changeSubscription() {
+        let subscription = document.getElementById('selectSubscription').value;
+        if (subscription === 'free') {
+          alert("Solo puedes tomar los cursos gratis");
+        } else if (subscription === 'basic') {
+          alert("Puedes tomar casi todos los cursos de Platzi durante un mes");
+        } else if (subscription === 'expert') {
+          alert("Puedes tomar casi todos los cursos de Platzi durante un año");
+        } else if (subscription === 'expertplus') {
+          alert("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+        }
+      }
+      //////////////////////////////////////////////////////////////////////////////////
+      function ejercicioWhile1() {
+        let i = 0;
+        while (i < 5) {
+          alert(`El valor de i es: ${i}`);
+          i++;
+        }
+      }
+      function ejercicioWhile2() {
+        let i = 10;
+        while (i >= 2) {
+          alert(`El valor de i es: ${i}`);
+          i--;
+        }
+      }
+      function evaluarAdicion(e) {
+        let resultado;
+        do {
+          resultado = parseInt(prompt('¿Cuál es el resultado de "2 + 2"?'));
+        } while ( resultado !== 4 );
+        if (resultado === 4) {
+          alert('Correcto');
+        }
+      }
+      //////////////////////////////////////////////////////////////////////////////////
+      let arrayFrutas = ["manzana", "pera", "uva", "naranja", "limon"]
+      const juanReyes = {
+        "nombre": "Juan",
+        "apellido": "Reyes",
+        "edad": 27,
+        "programador": true
+      }
+      function section4Question2(array) {
+        alert(array[0])
+      }
+      function section4Question3(array) {
+        for (i = 0; i < array.length; i++) {
+          alert(array[i]);
+        }
+      }
+      function section4Question4(juanReyes) {
+        for (let caracteristica in juanReyes) {
+          alert(`${caracteristica}: ${juanReyes[caracteristica]}`)
+        }
+      }
+    </script>
+  </body>
+</html>
