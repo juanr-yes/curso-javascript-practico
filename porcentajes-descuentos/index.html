@@ -37,6 +37,26 @@
       </form>
       <p id="resultado"></p>
     </section>
+    <hr>
+    <section>
+      <h2>Aplica un cupón de descuento</h2>
+      <form action="">
+        <div>
+          <label for="precioCupon">
+            Escribe el precio de tu producto
+          </label>
+          <input type="number" id="precioCupon">
+        </div>
+        <div>
+          <label for="descuentoCupon">
+            Escribe el cupón a aplicar
+          </label>
+          <input type="text" id="descuentoCupon">
+        </div>
+        <button type="button" onclick="onClickButtonPriceDiscountCoupon()">Calcular el precio</button>
+      </form>
+      <p id="resultadoCupon"></p>
+    </section>
     <script src="main.js"></script>
   </body>
 </html>
